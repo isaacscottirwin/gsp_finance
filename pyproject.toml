@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsp-finance"
+version = "0.1.0"
+description = "Graph signal processing research for financial markets"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "kagglehub",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "pandas",
+    "scipy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "mypy",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
